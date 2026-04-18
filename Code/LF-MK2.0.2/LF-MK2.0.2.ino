@@ -151,9 +151,9 @@ void calibrate() {
   for (int i = 0; i < 3000; i++) {
     moveCustom(150, -150);
     for (int j = 0; j < 7; j++) {
-      int val = analogRead(sensorPins[j]);
-      if (val < minValues[j]) minValues[j] = val;
-      if (val > maxValues[j]) maxValues[j] = val;
+      int value = analogRead(sensorPins[j]);
+      if (value < minValues[j]) minValues[j] = value;
+      if (value > maxValues[j]) maxValues[j] = value;
     }
     delay(1);
   }
