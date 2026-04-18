@@ -11,7 +11,7 @@ void setup() {
 void loop() {
   if (IrReceiver.decode()) {
     uint32_t receivedCode = IrReceiver.decodedIRData.decodedRawData;
-    if (receivedCode == 0xBA44FF00 || receivedCode == 0xE817BF40) {
+    if (receivedCode == 0xBA44FF00) {
       isOn = !isOn;
     }
     Serial.println(IrReceiver.decodedIRData.decodedRawData, HEX);
